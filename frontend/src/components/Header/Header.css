@@ -1,0 +1,234 @@
+/* Base styles - Mobile First Approach */
+.Header {
+  height: 31vh;
+  margin: 20px auto;
+  background: url("/src/background3.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 90%;
+  bottom: 10%;
+  left: 5%;
+  animation: fadeIn 3s;
+  padding: 0 10px;
+}
+
+.header-contents h2 {
+  font-weight: 500;
+  color: #49557e;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.header-contents p {
+  color: #49557e;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  display: block;
+}
+
+.header-btn {
+  max-width: 120px;
+  border: none;
+  color: #747474;
+  font-weight: 500;
+  padding: 10px 20px;
+  background-color: white;
+  font-size: 0.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-btn:hover {
+  background-color: #49557e;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .Header {
+    height: 19vh;
+    margin: 25px auto;
+  }
+
+  .header-contents {
+    max-width: 70%;
+    left: 6%;
+    gap: 20px;
+  }
+
+  .header-contents h2 {
+    font-size: 2.2rem;
+  }
+
+  .header-contents p {
+    font-size: 1.1rem;
+  }
+
+  .header-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+    max-width: 150px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .Header {
+    height: 34vw;
+    margin: 30px auto;
+  }
+
+  .header-contents {
+    max-width: 50%;
+    left: 6vw;
+    gap: 1.5vw;
+  }
+
+  .header-contents h2 {
+    font-size: 2.5rem;
+  }
+
+  .header-contents p {
+    font-size: 1.2rem;
+  }
+
+  .header-btn {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    max-width: 180px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1440px) {
+  .Header {
+    height: 500px;
+  }
+
+  .header-contents h2 {
+    font-size: 3rem;
+  }
+
+  .header-contents p {
+    font-size: 1.3rem;
+  }
+}
+
+/* Enhanced mobile styles - 480px and below */
+@media (max-width: 480px) {
+    .Header {
+        height: 18vh;
+        margin: 12px auto;
+        border-radius: 8px;
+        background-position: center;
+    }
+    
+    .header-contents {
+        max-width: 90%;
+        left: 5%;
+        right: 5%;
+        bottom: 12%;
+        gap: 8px;
+        padding: 0 5px;
+    }
+    
+    .header-contents h2 {
+        font-size: 1.1rem;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+    
+    .header-contents p {
+        font-size: 0.75rem;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .header-btn {
+        font-size: 0.7rem;
+        padding: 6px 12px;
+        max-width: 85px;
+        border-radius: 18px;
+    }
+}
+
+/* Ultra-small mobile - 375px and below */
+@media (max-width: 375px) {
+    .Header {
+        height: 18vh;
+        margin: 10px auto;
+    }
+    
+    .header-contents {
+        max-width: 88%;
+        left: 6%;
+        right: 6%;
+        bottom: 15%;
+        gap: 6px;
+    }
+    
+    .header-contents h2 {
+        font-size: 1rem;
+        line-height: 1.15;
+    }
+    
+    .header-contents p {
+        font-size: 0.7rem;
+    }
+    
+    .header-btn {
+        font-size: 0.65rem;
+        padding: 5px 10px;
+        max-width: 80px;
+    }
+}
+
+/* Micro mobile - 320px and below */
+@media (max-width: 320px) {
+    .Header {
+        height: 40vh;
+        margin: 8px auto;
+    }
+    
+    .header-contents {
+        max-width: 85%;
+        left: 7%;
+        right: 7%;
+        bottom: 18%;
+        gap: 5px;
+    }
+    
+    .header-contents h2 {
+        font-size: 0.9rem;
+        line-height: 1.1;
+    }
+    
+    .header-contents p {
+        font-size: 0.65rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .header-btn {
+        font-size: 0.6rem;
+        padding: 4px 8px;
+        max-width: 75px;
+    }
+}
