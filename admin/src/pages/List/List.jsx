@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const List = () => {
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_API_URL || "http://localhost:4000";
   const [list, setList] = useState([]);
 
   const fetchList = async () => {
@@ -27,7 +27,9 @@ const List = () => {
   }, []);
   const removefood = async (foodId) => {
     try {
-      const response = await axios.post(`${url}/api/food/remove`, { id: foodId });
+      const response = await axios.post(`${url}/api/food/remove`, {
+        id: foodId,
+      });
       console.log(response.data);
 
       if (response.data.success) {
@@ -41,7 +43,7 @@ const List = () => {
       console.error("Error:", error);
       toast.error("Error removing food item");
     }
-  }
+  };
   return (
     <div className="list add flex-col">
       <p>All Food List</p>
@@ -54,7 +56,7 @@ const List = () => {
           <p>Action</p>
         </div>
         {list.length === 0 ? (
-          <p style={{ textAlign: 'center', padding: '20px', color: '#666' }}>
+          <p style={{ textAlign: "center", padding: "20px", color: "#666" }}>
             No food items found. Add some items first.
           </p>
         ) : (
@@ -68,7 +70,7 @@ const List = () => {
                 <p
                   onClick={() => removefood(item._id)}
                   className="remove-btn"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   ×
                 </p>
