@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "chmod +x node_modules/.bin/vite || echo 'chmod not available'",
     "build": "npx vite build",
     "start": "node server.js",
     "lint": "eslint .",
