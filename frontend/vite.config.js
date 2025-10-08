@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   
   return {
-    base: './', // Set base to relative for GitHub Pages
+    base: '/', // Set base to root for Netlify
     plugins: [react()],
     server: {
       port: 5173,
@@ -18,19 +18,20 @@ export default defineConfig(({ mode }) => {
           secure: false,
           rewrite: (path) => path.replace(/^\/api/, '')
         }
-      }
-    },
-    define: {
-      'process.env': {}
-    },
-    build: {
-      outDir: 'dist',
-      sourcemap: false,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom'],
-            utils: ['react-router-dom']
+      },
+      define: {
+        'process.env.NODE_ENV': JSON.stringify(env.NODE_ENV),
+        'process.env': {},
+      },
+      build: {
+        outDir: 'dist',
+        sourcemap: false,
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              vendor: ['react', 'react-dom'],
+              utils: ['react-router-dom']
+            }
           }
         }
       }

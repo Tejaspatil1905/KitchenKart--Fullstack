@@ -1,0 +1,130 @@
+.list {
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.list p:first-child {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list-table {
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+
+.list-table-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 0.5fr;
+  background-color: #f8f9fa;
+  padding: 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #dee2e6;
+  gap: 10px;
+}
+
+.list-table-header p {
+  margin: 0;
+  text-align: center;
+  color: #495057;
+  font-size: 14px;
+}
+
+.list-table-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 0.5fr;
+  padding: 15px;
+  border-bottom: 1px solid #dee2e6;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.list-table-row:hover {
+  background-color: #f8f9fa;
+}
+
+.list-table-row:last-child {
+  border-bottom: none;
+}
+
+.list-table-row img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  justify-self: center;
+  border: 1px solid #dee2e6;
+}
+
+.list-table-row p {
+  margin: 0;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s;
+  justify-self: center;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .list {
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .list-table-header,
+  .list-table-row {
+    grid-template-columns: 0.8fr 1.5fr 1fr 1fr 0.5fr;
+    font-size: 12px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .list-table-header p,
+  .list-table-row p {
+    font-size: 12px;
+  }
+
+  .list-table-row img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .remove-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+
