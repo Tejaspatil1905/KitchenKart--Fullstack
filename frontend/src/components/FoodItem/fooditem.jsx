@@ -3,9 +3,9 @@ import './fooditem.css'
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../../Context/StoreContext'
 
-const fooditem = ({id, name, price, description, image}) => {
+const FoodItem = ({id, name, price, description, image}) => {
   const {cartItems, addToCart, removeFromCart,url} = useContext(StoreContext);
-  
+
   return (
     <div className='fooditem'>
       <div className="food-item-img-container">
@@ -29,4 +29,4 @@ const fooditem = ({id, name, price, description, image}) => {
   )
 }
 
-export default fooditem
+export default FoodItem
