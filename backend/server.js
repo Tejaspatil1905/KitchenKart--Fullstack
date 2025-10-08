@@ -6,10 +6,7 @@ import foodRouter from "./routes/foodroute.js";
 import userRoute from "./routes/Userroute.js";
 import orderRouter from "./routes/orderRoute.js";
 
-console.log(
-  "STRIPE_SECRET_KEY loaded:",
-  process.env.STRIPE_SECRET_KEY ? "Yes" : "No"
-);
+
 console.log("PAYU_KEY loaded:", process.env.PAYU_KEY ? "Yes" : "No");
 console.log("PAYU_SALT loaded:", process.env.PAYU_SALT ? "Yes" : "No");
 
@@ -17,7 +14,7 @@ console.log("userRoute:", userRoute);
 
 //app config
 const app = express();
-const port = 4000;
+const port = process.env.PORT ||  4000;
 // trigger restart 3
 
 //middleware
