@@ -1,3 +1,6 @@
+project is live and deployed here: https://kitchenkart-fullstack-frontend-mm96.onrender.com
+
+
 # KitchenKart 🍔
 
 A full-stack food delivery web application built with React, Node.js, Express, and MongoDB. Users can browse food items, add to cart, place orders, and make secure payments via PayU integration. Includes an admin panel for managing food items and orders.
